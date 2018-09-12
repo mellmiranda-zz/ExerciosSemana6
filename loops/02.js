@@ -5,30 +5,13 @@
 //   [0, 0, 0, 0, 0],
 //   [0, 0, 0, 0, 0],
 //   [0, 0, 0, 0, 0] ]
-let matriz = []
-for (let j = 0; j < 5; j++) {
-    let linha = []
+
+for (let c = 0; c < 5; c++) {
+    let lista = [];
     for (let i = 0; i < 5; i++) {
-        linha.push(0)
+        lista.push(0);    
     }
-    matriz.push(linha)
-}
-// ou...
-let linha = []
-for (let i = 0; i < 5; i++) {
-    linha.push(0)
-}
-let matriz = []
-for (let i = 0; i < 5; i++) {
-    matriz.push(linha)
-}
-// ou..
-// nao pratico, porque? referencias.
-let matriz = []
-let linha = []
-for (let i = 0; i < 5; i++) {
-    linha.push(0)
-    matriz.push(linha)
+    console.log (lista)
 }
 
 // Escreva um loop em Javascript
@@ -48,21 +31,15 @@ for (let j = 0; j < 5; j++) { // A
     matriz.push(linha)
 }
 
-// 1 iteracao A -> j = 0; matriz = []
-    // 1 iteracao B -> i = 0; linha = []; linha.push(0 - 0) -> linha = [0]
-    // 2 iteracao B -> i = 1; linha = [0]; linha.push(1 - 0) -> linha = [0, 1]
-    // 3 iteracao B -> i = 2; linha = [0, 1]; linha.push(2 - 0) -> linha = [0, 1, 2]
-    // 4 iteracao B -> i = 3; linha = [0, 1, 2]; linha.push(3 - 0) -> linha = [0, 1, 2, 3]
-    // 5 iteracao B -> i = 4; linha = [0, 1, 2, 3]; linha.push(4 - 0) -> linha = [0, 1, 2, 3, 4]
-// matriz.push([0, 1, 2, 3, 4]) -> matriz = [[0, 1, 2, 3, 4]]
-// 2 iteracao A -> j = 1; matriz = [[0, 1, 2, 3, 4]]
-    // 1 iteracao B -> i = 0; linha = []; linha.push(0 - 1) -> linha = [-1]
-    // 2 iteracao B -> i = 1; linha = [-1]; linha.push(1 - 1) -> linha = [-1, 0]
-    // 3 iteracao B -> i = 2; linha = [-1, 0]; linha.push(2 - 1) -> linha = [-1, 0, 1]
-    // 4 iteracao B -> i = 3; linha = [-1, 0, 1]; linha.push(3 - 1) -> linha = [-1, 0, 1, 2]
-    // 5 iteracao B -> i = 4; linha = [-1, 0, 1, 2]; linha.push(4 - 1) -> linha = [-1, 0, 1, 2, 3]
-// matriz.push([-1, 0, 1, 2, 3]) -> matriz = [[0, 1, 2, 3, 4], [-1, 0, 1, 2, 3]]
-// ...
+for (let c = 0; c < 5; c++) {
+    let lista = [];
+    for (let i = 0; i < 5; i++) {
+        lista.push(i);    
+    }
+    console.log (lista)
+}
+
+
 
 // Escreva um loop em Javascript
 // que printa o seguinte padrão
@@ -72,41 +49,66 @@ for (let j = 0; j < 5; j++) { // A
 // *****
 // ****
 // ***
-// **
+// ** let c = 7; c > 0; c--
 // *
-for (let j = 0; j < 7; j++) { 
-    let asteriscos = ""
-    for (let i = 0; i < (7 - j); i++) { 
-        asteriscos += "*"
+
+let linha=[]
+for (let i=0; i<5; i++){
+    linha.push ("*")
+    console.log (linha)
+}
+linha.reverse()
+
+for (let c = 7; c > 0; c--){
+    let star = ["*****"]
+    for (let i = 0; i < 6; i++){
+        star.push("*")
     }
-    console.log(asteriscos)
+    star.substr (1,(star.length - 1))
+    console.log (star)
 }
-// ou...
-for (let j = 0; j < 7; j++) { 
-    let asteriscos = ""
-    for (let i = j; i < 7; i++) { 
-        asteriscos += "*"
+
+
+for (let i = 0; i < 6; i++){
+    let ast = "*";
+        for (let i=0)
+        ast.push("*")
+}
+
+
+for (let c = 5; c > 1; c--) {
+    let lista = ["*"];
+    for (let i = 0; i < 7; i--) {
+        lista.push("*");    
     }
-    console.log(asteriscos)
+    console.log (lista)
 }
-// ou...
-let asteriscos = "********"
-while (asteriscos.length > 1) {
-    asteriscos = asteriscos.substr(1, (asteriscos.length - 1))
-    console.log(asteriscos)
+
+for (let c = 6; c < 1; c--) {
+    let lista = ["*"];
+    for (let i = 0; i > 7; i++) {
+        lista.push("*");    
+    }
+    console.log (lista)
 }
-// ou...
-let asteriscos = ["*", "*", "*", "*", "*", "*", "*", "*"]
-for (let i = 7; i < 7; i++) {
-    asteriscos = asteriscos.slice(1)
-    console.log(asteriscos.join(""))
+
+for (let c = 0; c > 7; c++) {
+    let lista = ["*"];
+    for (let i = 0; i < 7; i--) {
+        lista.push("*");    
+    }
+    console.log (lista)
 }
-// ou...
-let asteriscos = ["*", "*", "*", "*", "*", "*", "*", "*"]
-for (let i = 0; i < 7; i++) {
-    asteriscos.pop() 
-    console.log(asteriscos.join(""))
+
+
+//VERSÃO FINAL:
+let linha=[]
+for (let i=0; i<5; i++){
+    linha.push ("*")
+    console.log (linha)
 }
+
+
 
 // Escreva um loop em Javascript
 // que printa o seguinte padrão
